@@ -4,12 +4,12 @@
    "version": "0.0.0",
    "type": "module",
    "scripts": {
-      "dev": "npm run format && vite",
+      "dev": "npm run format && vite --host 0.0.0.0",
       "build": "tsc -b && vite build",
       "preview": "vite preview",
-      "format": "pnpx @biomejs/biome format --write",
-      "lint": "pnpx @biomejs/biome lint --write",
-      "check": "pnpx @biomejs/biome check --write"
+      "format": "npx @biomejs/biome format --write",
+      "lint": "npx @biomejs/biome lint --write",
+      "check": "npx @biomejs/biome check --write"
    },
    "dependencies": {
       "@fontsource-variable/inter": "^5.2.8",

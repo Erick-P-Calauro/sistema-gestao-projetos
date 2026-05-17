@@ -1,0 +1,20 @@
+FROM node:26-alpine3.22 AS base
+
+FROM base AS dependencies
+
+WORKDIR /tmp/deps
+
+COPY package.json package-lock.json ./
+RUN npm ci --include=dev
+
+FROM base AS dev
+
+WORKDIR /usr/app
+
+COPY --from=dependencies /tmp/deps/node_modules node_modules
+COPY . .
+
+RUN ["apk", "add", "--no-cache", "bash"] 
+
+EXPOSE 5173
+ENTRYPOINT ["npm", "run", "dev"]

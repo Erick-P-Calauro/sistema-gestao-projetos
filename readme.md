@@ -8,10 +8,10 @@ Este projeto está sendo desenvolvido durante processo seletivo para a Mega Jún
 
 Este sistema apresenta os seguintes requisitos para desenvolvimento : 
 
-1. Docker
+1. Docker (Versão >= 29.2.1)
 
 Caso queira utilizar o sistema sem utilizar contêineres docker : 
 
-1. PNPM (Versão >= 10.32.1)
+1. NPM (Versão >= 12.12.1)
 2. Node.JS (Versão >= 24.13.1) 
 
